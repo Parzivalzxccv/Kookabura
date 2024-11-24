@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="Icon1.png" type="image/x-icon"> 
+    <link rel="icon" href="Icon1.png" type="image/x-icon">
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            font-size: 62.5%;
+            min-height: 100%;
+        }
+
+        body {
+            background-image: url("kseamwwymcv41.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            color: white;
+        }
+
+        /* Header Styling */
+        header {
+            margin-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 9%;
+            filter: drop-shadow(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 3rem;
+            color: #ded8c6;
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        nav a {
+            font-size: 1.8rem;
+            color: white;
+            margin-left: 4rem;
+            font-weight: 500;
+            transition: 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #ded8c6;
+            border-bottom: 3px solid #ac874e;
+        }
+
+        /* Title Styling */
+        .title {
+            color: #ded8c6;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            margin-top: 200px;
+            font-size: 4rem;
+            font-weight: 700;
+        }
+
+        /* Buttons Container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 50px 0;
+        }
+
+        /* Buttons Styling */
+        .custom-button {
+            font-family: 'Poppins', sans-serif;
+            display: inline-block;
+            padding: 1rem 2.8rem;
+            background-color: black;
+            border-radius: 4rem;
+            font-size: 1.6rem;
+            color: #ac874e;
+            letter-spacing: 0.3rem;
+            font-weight: 600;
+            border: 2px solid #ac874e;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+
+        .custom-button:hover {
+            transform: scale3d(1.03);
+            background-color: #ac874e;
+            color: black;
+            box-shadow: 0 0 25px #ac874e;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <a href="#" class="logo">クッカバラ</a>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="menu.html">MENU</a>
+            <a href="details.html">DETAILS</a>
+            <a href="location.html">LOCATION</a>
+            <a href="contact.html" class="active">ABOUT US</a>
+        </nav>
+    </header>
+
+    <!-- Title Section -->
+    <p class="title">About Us</p>
+
+    <!-- Buttons Section -->
+    <div class="container">
+        <button class="custom-button" onclick="window.location.href='Bachiller.html';">MALONIE BACHILLER</button>
+        <button class="custom-button" onclick="window.location.href='Abogado.html';">HADDEN PAUL ABOGADO</button>
+        <button class="custom-button" onclick="window.location.href='Navarro.html';">YASMIEN MARIKO NAVARRO</button>
+        <button class="custom-button" onclick="window.location.href='Umali.html';">STEPHEN CLARK UMALI</button>
+        <button class="custom-button" onclick="window.location.href='Vila.html';">DAN ARVIN VILA</button>
+        <button class="custom-button" onclick="window.location.href='Vuelba.html';">JOMELYN VUELBA</button>
+    </div>
+</body>
+</html>

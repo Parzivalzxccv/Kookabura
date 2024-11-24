@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Icon1.png" type="image/x-icon"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Icon1.png" type="image/x-icon">
+    <title>クッカバラ</title>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="Music.mp3" type="audio/mpeg">
+        <source src="Music.wav" type="audio/wav">
+        <source src="Music.ogg" type="audio/ogg">
+        <source src="Music.aac" type="audio/aac">
+    </audio>
+    <header>
+        <a href="#" class="logo">クッカバラ</a>
+        <nav>
+            <a href="#" class="active"> HOME</a>
+            <a href="menu.html">MENU</a>
+            <a href="details.html">DETAILS</a>
+            <a href="location.html">LOCATION</a>
+            <a href="contact.html">ABOUT US</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-img">
+            
+            <div class="slider">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                   
+                    <div class="slide first">
+                        <img src="images/HomepageLogo.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/Onigiri.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/Tempura.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/Mochi.png" alt="">
+                    </div>
+
+                   
+
+                   
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+                   
+                </div>
+                
+                <div class="navigation-manual">
+                    <lfel for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+               
+            </div>
+            
+        </div>
+        <div class="home-content">
+            <h1>Welcome to <span>kookaburra</span></h1>
+            <h3 class="typing-text">We have <span></span></h3>
+            <p>Kookaburra Japanese Foods Store offers a curated selection of authentic Japanese ingredients, snacks, and beverages. Discover fresh sushi-grade fish, premium rice, unique condiments, and more for your favorite Japanese recipes.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="reserve.html" class="btn">Reserve Now</a>
+        </div>
+    </section>
+
+   
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function() {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 4) {
+                counter = 1;
+            }
+        }, 5000);
+    </script>
+</body>
+</html>

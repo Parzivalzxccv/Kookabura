@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="Icon1.png" type="image/x-icon"> 
+    <link rel="icon" href="Icon1.png" type="image/x-icon">
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            font-size: 62.5%;
+            min-height: 100%;
+        }
+
+        body {
+            background-image: url("kseamwwymcv41.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            color: white;
+        }
+
+        /* Header Styling */
+        header {
+            margin-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 9%;
+            filter: drop-shadow(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 3rem;
+            color: #ded8c6;
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        nav a {
+            font-size: 1.8rem;
+            color: white;
+            margin-left: 4rem;
+            font-weight: 500;
+            transition: 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #ded8c6;
+            border-bottom: 3px solid #ac874e;
+        }
+
+        /* Title Styling */
+        .title {
+            color: #ded8c6;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            margin-top: 200px;
+            font-size: 4rem;
+            font-weight: 700;
+        }
+
+        /* Buttons Styling */
+        .custom-button {
+            font-family: 'Poppins', sans-serif;
+            display: inline-block;
+            padding: 1rem 2.8rem;
+            background-color: black;
+            border-radius: 4rem;
+            font-size: 1.6rem;
+            color: #ac874e;
+            letter-spacing: 0.3rem;
+            font-weight: 600;
+            border: 2px solid #ac874e;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+
+        .custom-button:hover {
+            transform: scale3d(1.03);
+            background-color: #ac874e;
+            color: black;
+            box-shadow: 0 0 25px #ac874e;
+        }
+
+        
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 80px;
+            padding-top: 100px;
+        }
+
+        .menu-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .menu-item:hover img {
+            transform: scale(1.1);
+            filter: brightness(70%);
+        }
+
+        .menu-description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .menu-item:hover .menu-description {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <a href="index.html" class="logo">クッカバラ</a>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="menu.html" class="active">MENU</a> <!-- 'MENU' active link -->
+            <a href="details.html">DETAILS</a>
+            <a href="location.html">LOCATION</a>
+            <a href="contact.html">ABOUT US</a>
+        </nav>
+    </header>
+
+    <!-- Food Menu Section -->
+    <div class="menu-container">
+        <div class="menu-item">
+            <img src="images/Ramen1.jpg" alt="Ramen">
+            <div class="menu-description">A bowl of rich broth, tender pork, boiled egg, and fresh vegetables served with perfectly cooked noodles.</div>
+        </div>
+        <div class="menu-item">
+            <img src="images/Sushi1.jpg" alt="Sushi">
+            <div class="menu-description">Fresh, vinegared rice topped with slices of raw fish or vegetables, creating a delicate and flavorful bite.</div>
+        </div>
+        <div class="menu-item">
+            <img src="images/Onigiri1.png" alt="Onigiri1">
+            <div class="menu-description">Savory rice balls filled with a variety of ingredients like pickled plum, salted salmon, or tuna, wrapped in seaweed for a portable and delicious snack.</div>
+        </div>
+        <div class="menu-item">
+            <img src="images/Tempura1.png" alt="Tempura">
+            <div class="menu-description">Crispy battered vegetables and seafood, served with a savory dipping sauce. </div>
+        </div>
+        <div class="menu-item">
+            <img src="images/Mochi1.jpg" alt="Mochi">
+            <div class="menu-description">Chewy, sweet rice dough with a variety of delicious fillings like red bean or matcha.</div>
+        </div>
+        <div class="menu-item">
+            <img src="images/Dorayaki1.jpg" alt="Dorayaki">
+            <div class="menu-description">Sweet, fluffy pancakes filled with smooth red bean paste.</div>
+        </div>
+        <div class="menu-item">
+            <img src="images/Katsu.jpg" alt="Katsu">
+            <div class="menu-description">Crispy breaded pork or chicken cutlet, served with a tangy tonkatsu sauce.</div>
+        </div>
+        <div class="menu-item">
+            <img src="images/Cheesecake.jpg" alt="Cheesecake">
+            <div class="menu-description">Fluffy pancakes drizzled with maple syrup and a dollop of butter.</div>
+        </div>
+        <div class="menu-item">
+            <img src="images/takoyaki1.jpg" alt="takoyaki1">
+            <div class="menu-description">Golden, crispy dough balls filled with octopus, drizzled with savory sauce and bonito flakes.</div>
+        </div>
+        <div class="menu-item">
+            <img src="images/Wagyu.jpg" alt="Wagyu">
+            <div class="menu-description">Tender and juicy grilled Wagyu beef, served with mashed potatoes and seasonal vegetables. </div>
+</div>
+        <div class="menu-item">
+            <img src="images/Sukiyaki.webp" alt="Sukiyaki">
+            <div class="menu-description">Warm and hearty soup made with fresh ingredients and spices.</div>
+        </div>
+        <div class="menu-item">
+            <img src="images/Soba.webp" alt="Soba">
+            <div class="menu-description">Buckwheat noodles served hot or cold, paired with a light soy-based broth and garnished with scallions. </div>
+        </div>
+    </div>
+</body>
+</html>
