@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="shortcut icon" href="Icon1.png" type="image/x-icon">
-        <title>予約フォーム</title>
+        <title>Reserve Form</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style2.css">
         <link rel="icon" href="Icon1.png" type="image/x-icon">
@@ -65,14 +65,25 @@
             </div>
         </section>
 
+        <div class="custom-alert" id="successAlert">
+            <h4>Your booking has been successfully submitted!</h4>
+            <button class="btn-close" id="closeAlert">Close</button>
+        </div>
+    
         <script>
             const form = document.getElementById('bookingForm');
-
+            const successAlert = document.getElementById('successAlert');
+            const closeAlertButton = document.getElementById('closeAlert');
+    
             form.addEventListener('submit', function(event) {
                 event.preventDefault(); 
-                alert("Your booking has been successfully submitted!");
-                window.location.href = "index.html";
+                successAlert.style.display = 'block';
+            });
+    
+            closeAlertButton.addEventListener('click', function() {
+                successAlert.style.display = 'none'; 
+                window.location.href = "index.html"; 
             });
         </script>
     </body>
-</html>
+    </html>

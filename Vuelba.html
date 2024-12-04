@@ -20,13 +20,24 @@
 
         body {
             background-image: url("kseamwwymcv41.jpg");
-            background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             color: white;
             overflow-x: hidden;
         }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); 
+            z-index: -1; 
+                    }
+
 
         header {
             text-align: center;
@@ -39,6 +50,7 @@
             border-radius: 50%;
             overflow: hidden;
             margin: 20px auto;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
         }
 
         .circular-frame img {
@@ -57,10 +69,36 @@
             text-align: center;
         }
 
+        .motto-container {
+            margin-bottom: 7px;
+            margin-top: -50px;
+            animation: fadeIn 3s ease-out;
+        }
+
+        .motto {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ac874e;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            letter-spacing: 0.1rem;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .about {
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
+            text-align: center;
         }
 
         .social-icons {
@@ -68,6 +106,7 @@
             display: flex;
             justify-content: center;
             gap: 1.5rem;
+            flex-wrap: wrap;
         }
 
         .social-icons a {
@@ -94,24 +133,28 @@
             margin-top: 20px;
             line-height: 1.8;
             text-align: center;
+            
         }
 
-        /* Next Button Styling */
         .next-button {
-            position: absolute;
+            position: fixed;
             bottom: 20px;
             right: 20px;
-            font-size: 18px;
-            color: white;
-            background: none;
-            border: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #ac874e;
+            background: black;
+            border: 2px solid #ac874e;
+            border-radius: 25px;
             cursor: pointer;
-            transition: color 0.3s ease, transform 0.2s ease;
+            transition: all 0.3s ease;
         }
 
         .next-button:hover {
-            color: #ac874e;
-            transform: translateY(-5px);
+            background: #ac874e;
+            color: black;
+            transform: translateY(-3px);
         }
     </style>
 </head>
@@ -124,6 +167,9 @@
     </header>
     <main>
         <section class="about">
+            <div class="motto-container">
+                <p class="motto">"I'll touch myself nlng"</p>
+            </div>
             <h2 class="text-color">
                 <div id="dynamic-text">Jomelyn Vuelba</div>
             </h2>
@@ -137,17 +183,21 @@
                     textElement.textContent = textArray[currentIndex];
                 }, 2000);
             </script>
-            <!-- Social Icons -->
+            
             <div class="social-icons">
                 <a href="https://www.facebook.com/jomelyn.vuelba" target="_blank"><i class="fab fa-facebook"></i></a>
                 <a href="https://www.instagram.com/swwtmpie/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="tel:09703271614" target="_blank"><i class="fas fa-phone-alt"></i></a>
+                <a href="mailto:jvuelba@email.com" target="_blank"><i class="fas fa-envelope"></i></a>
             </div>
+            
             <p class="text-color">
-                We started our journey in [Year] with the mission to [Your Mission]. 
-                Our team is dedicated to [Your Values or Goals].
+                Welcome to my profile! I am Jomelyn Vuelba, the Kitchen Manager at Kookaburra Japanese Restaurant. 
+                With years of experience in culinary management, I am passionate about delivering exceptional dining experiences. 
+                Feel free to connect with me on social platforms or reach out for professional inquiries.
             </p>
             
-            <button class="next-button" onclick="window.location.href='contact.html'">次へ</button> 
+            <button class="next-button" onclick="window.location.href='contact.html'">Back</button>
         </section>
     </main>
 </body>
